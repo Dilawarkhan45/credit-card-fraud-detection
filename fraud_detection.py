@@ -9,7 +9,7 @@ Original file is located at
 
 # Install if needed:
 # pip install pandas scikit-learn imbalanced-learn matplotlib seaborn
-
+import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
