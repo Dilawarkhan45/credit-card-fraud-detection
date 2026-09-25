@@ -34,7 +34,15 @@ from imblearn.over_sampling import SMOTE
 # 1. Load dataset
 # =========================================================
 
-df = pd.read_csv("creditcard.csv")
+# 1. Create a cached data loader function so it only downloads the dataset once
+@st.cache_data
+def load_data_from_cloud():
+    # TODO: Paste your direct cloud download link below
+    url = "https://google.com"
+    return pd.read_csv(url)
+
+# 2. Call the cloud data loader function
+df = load_data_from_cloud()
 
 # Drop rows with any NaN values
 df.dropna(inplace=True)
